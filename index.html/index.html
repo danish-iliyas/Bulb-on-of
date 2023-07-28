@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Switch Bulb</title>
+    <style>
+   #btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 69px;
+    border: 2px solid #39413861;
+    border-radius: 50px;
+    
+
+   }
+   #click-btn{
+    /* margin: 4px; */
+    background-color: #ff00e0;
+    border-radius: 4px;
+    
+    color: white;
+    font-family: monospace;
+    padding: 11px;
+    cursor: pointer;
+    margin: -103p
+    
+   }
+   #img1{
+    height: 400px;
+    background-color: black;
+   }
+    </style>
+</head>
+
+<body>
+   <div id="btn">
+    <img id="img1" src="../img/bulb-of.png" alt="" >
+    <button id="click-btn" class="tbtn">Turn on</button>
+   </div>
+  
+   <script>
+    const bulb = document.getElementById('img1')
+    const btn1 = document.getElementById('click-btn')
+   btn1.addEventListener('click' , turnOn);
+
+function turnOn(e){
+if(btn1.textContent.includes('on')){
+    bulb.src = "../img/bulb-on.png"
+    btn1.textContent ="Turn-of"; 
+}
+else{
+    bulb.src = "../img/bulb-of.png" 
+    btn1.textContent = "Turn-on"; 
+}
+}
+   </script>
+</body>
+
+</html>
